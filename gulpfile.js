@@ -1,4 +1,4 @@
-﻿"use strict";
+"use strict";
 
 
 /* -- Подключение модулей  -- */
@@ -48,7 +48,7 @@ var run = require("run-sequence");
 /* Модуль для удаления файлов */
 var del = require("del");
 
-/* POSTHTML для минификации HTML с плагином для вставки 
+/* POSTHTML для минификации HTML с плагином для вставки
 других файлов в HTML файлс помощью <include src=""></include> */
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
@@ -114,9 +114,12 @@ gulp.task("webp", function() {
 /* Сборка спрайта */
 gulp.task("sprite", function() {
   return gulp.src("./build/img/inline-icons/*.svg")
-    .pipe(svgstore({    /* вырезает из SVG-файлов лишнюю инф-цию */
+    .pipe(svgstore({    /* Делает спрайт из SVG-файлов */
       inLineSvg: true
     }))
+     .pipe(imagemin([
+      imagemin.svgo()
+      ]))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("./build/img"))
 });
@@ -144,7 +147,7 @@ gulp.task("serve", function() {
 gulp.task("copy", function() {
   return gulp.src([
     "./source/fonts/**/*.{woff,woff2}",
-    "./source/img/**"
+    /*"./source/img/**"*/
   ], {
     base: "./source/"     /* Говорим что базовый путь начинается из корня */
   })

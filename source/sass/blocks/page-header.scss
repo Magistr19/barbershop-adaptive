@@ -1,0 +1,29 @@
+
+.page-header__container {
+  width: $mobile-size;
+  min-height: 135px;
+  margin: 0 auto;
+}
+
+.page-header__logo-container {
+  display: flex;
+
+  height: 85px;
+
+  background-color: #242424;
+
+  justify-content: center;
+}
+
+.page-header__logo {
+  width: 226px;
+  margin-top: -32px;
+
+  &--top {
+    display: none;
+  }
+
+  &--bottom {
+    display: none;
+  }
+}

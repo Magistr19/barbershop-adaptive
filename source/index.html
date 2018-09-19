@@ -1,13 +1,78 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Title of the page</title>
+	<title>Барбершоп «Бородинский»</title>
 	<link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
-<body>
-	
+<body class="no-js*">
+  <div style="display: none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header__container">
+      <div class="page-header__logo-container">
+        <svg class="page-header__logo" role="img" width="369.5" height="153">
+          <use xlink:href="#barbershop-logo"></use>
+        </svg>
+      </div>
+      <nav class="main-nav">
+        <div class="main-nav__btn-wrapper">
+          <button class="main-nav__toogle main-nav__toogle--open*"></button>
+        </div>
+        <div class="main-nav__items-wrapper">
+          <ul class="main-nav__site-nav">
+            <li class="main-nav__item main-nav__item--current">
+              <a>Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Наши работы</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Записаться</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Контакты</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">HTML Academy</a>
+            </li>
+          </ul>
+          <ul class="main-nav__user-nav">
+            <li class="main-nav__user-item main-nav__user-item--login">
+            <svg class="main-nav__login-logo" aria-hidden="true" width="16" height="16">
+              <use xlink:href="#login-logo"></use>
+            </svg>
+              <a href="#">Войти</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section class="modal-login">
+        <h2 class="modal-login__title">Личный кабинет</h2>
+        <p class="modal-login__info">Введите свой логин и пароль, чтобы войти</p>
+        <form class="modal-login__form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="screen-reader" for="modal-login__username">Ваш логин: </label>
+          <div class="modal-login__username-container">
+            <input type="text" id="modal-login__username" class="modal-login__username" placeholder="Логин">
+          </div>
+          <label class="screen-reader" for="modal-login__password">Ваш пароль: </label>
+          <input type="password" id="modal-login__password" class="modal-login__password" placeholder="Пароль">
+          <div class="modal-login__rember-wrapper">
+            <input class="modal-login__remember screen-reader" id="modal-login__remember" type="checkbox">
+            <label class="modal-login__remember-label" for="modal-login__remember">Запомнить меня</label>
+            <a class="modal-login__forgot-pass" href="#">Забыл пароль!</a>
+          </div>
+          <div class="modal-login__btns-wrapper">
+            <button class="modal-login__enter" type="submit">Войти</button>
+            <button class="modal-login__close" type="button">Закрыть</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </header>
 	<script src="js/script.min.js"></script>
 </body>
 </html>
