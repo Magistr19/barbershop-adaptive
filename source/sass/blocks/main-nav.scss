@@ -94,6 +94,7 @@
 
     &::before {
       position: absolute;
+      z-index: 2;
 
       width: 8px;
       height: 100%;
@@ -149,14 +150,11 @@
   }
 
   .main-nav__user-nav {
-    height: 50vw;
-
-    background-color: #6a4d38;
-
     @include list-reset;
   }
 
   .main-nav__user-item {
+    z-index: 1;
     a {
       line-height: 24px;
 
@@ -171,6 +169,16 @@
 
       color: #ffffff;
       background-color: #6a4d38;
+    }
+  }
+
+  .main-nav__user-item {
+    &:last-child {
+      a {
+        height: 50vw;
+
+        background-color: #6a4d38;
+      }
     }
   }
 
@@ -199,10 +207,9 @@
 
     .main-nav__items-wrapper {
       position: static;
+      z-index: 1;
 
       display: flex;
-
-      z-index: 1;
 
       &::before {
         content: none;
