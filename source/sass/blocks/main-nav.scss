@@ -105,6 +105,10 @@
     }
   }
 
+  .main-nav__items-wrapper--open {
+    display: block;
+  }
+
   .main-nav__site-nav {
     @include list-reset;
   }

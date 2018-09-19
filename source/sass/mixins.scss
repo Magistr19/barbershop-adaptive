@@ -22,6 +22,14 @@
   border: 1px solid #e5ddd5;
   background-color: #ffffff;
 
+  &:hover {
+    border-color: #d5c9bd;
+  }
+
+  &:focus {
+    border-color: #999999;
+  }
+
   &::-webkit-input-placeholder {
     color: #000000;
   }
@@ -34,11 +42,4 @@
   &:-ms-input-placeholder {
     color: #000000;
   }
-}
-
-
-@mixin button--brown {
-}
-
-@mixin button--white {
 }
