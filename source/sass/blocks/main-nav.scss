@@ -216,8 +216,12 @@
       }
     }
 
-    .main-nav__user-nav {
-      height: auto;
+    .main-nav__user-item {
+      &:last-child {
+        a {
+          height: auto;
+        }
+      }
     }
   }
 }
