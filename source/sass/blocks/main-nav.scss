@@ -194,9 +194,10 @@
     position: absolute;
     top: 17px;
     left: 20px;
-    fill: #ffffff;
 
     opacity: 0.3;
+
+    fill: #ffffff;
   }
 
   /* No js */
@@ -358,5 +359,119 @@
     opacity: 0.3;
 
     fill: #ffffff;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .main-nav__items-wrapper {
+    width: 960px;
+    padding-right: 120px;
+    padding-left: 120px;
+  }
+
+  .main-nav__site-nav {
+    width: 800px;
+  }
+
+  .main-nav__item {
+    a {
+      display: block;
+
+      padding-top: 24px;
+      padding-right: 31px;
+      padding-bottom: 24px;
+      padding-left: 31px;
+
+      &[href]:hover {
+        color: #000000;
+        background-color: #ffffff;
+      }
+
+      &[href]:focus {
+        color: #000000;
+        background-color: #ffffff;
+      }
+
+      &[href]:active {
+        color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  .main-nav__item--current {
+    &::after {
+      right: 31px;
+      bottom: -3px;
+      left: 31px;
+    }
+  }
+
+  .main-nav__user-nav {
+    width: 130px;
+
+    justify-content: flex-end;
+  }
+
+  .main-nav__login-link {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+
+    position: static;
+
+    display: block;
+
+    box-sizing: border-box;
+    width: 130px;
+    height: auto;
+    padding-top: 23px;
+    padding-right: 20px;
+    padding-bottom: 23px;
+
+    text-align: right;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    order: 2;
+
+    &:hover {
+      color: #000000;
+      background-color: #ffffff;
+    }
+
+    &:focus {
+      color: #000000;
+      background-color: #ffffff;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .main-nav__login-logo {
+    position: absolute;
+    top: 28px;
+    right: 86px;
+  }
+
+  .main-nav__login-link:focus + .main-nav__login-logo {
+    opacity: 0.3;
+
+    fill: #000000;
+  }
+
+  .main-nav__login-link:hover + .main-nav__login-logo {
+    opacity: 0.3;
+
+    fill: #000000;
+  }
+
+  .main-nav__login-link:active + .main-nav__login-logo {
+    opacity: 0.1;
+
+    fill: #000000;
   }
 }
