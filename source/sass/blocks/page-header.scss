@@ -55,3 +55,18 @@
     }
   }
 }
+
+
+@media (min-width: $desktop-size) {
+  .page-header__logo-container {
+    height: 646px;
+  }
+
+   .page-header__logo {
+    margin-top: 57px;
+
+    &--bottom {
+    display: block;
+    }
+   }
+}
