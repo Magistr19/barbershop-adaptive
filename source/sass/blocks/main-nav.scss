@@ -194,6 +194,7 @@
     position: absolute;
     top: 17px;
     left: 20px;
+    fill: #ffffff;
 
     opacity: 0.3;
   }
@@ -223,5 +224,139 @@
         }
       }
     }
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .main-nav {
+    min-height: 72px;
+
+    background-color: #000000;
+  }
+
+  .main-nav__btn-wrapper {
+    display: none;
+  }
+
+  .main-nav__items-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    width: 640px;
+    min-height: 72px;
+    margin: 0 auto;
+    padding-right: 64px;
+    padding-left: 64px;
+
+    justify-content: space-between;
+  }
+
+  .main-nav__site-nav {
+    display: flex;
+
+    width: 560px;
+
+    align-items: center;
+    flex-wrap: wrap;
+    @include list-reset;
+    justify-content: space-between;
+  }
+
+  .main-nav__item {
+    a {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+
+      text-decoration: none;
+      text-transform: uppercase;
+
+      color: #ffffff;
+
+      &[href]:hover {
+        color: #826550;
+      }
+
+      &[href]:active {
+        color: rgba(255,255,255,0.3);
+      }
+      &:focus {
+        color: #826550;
+        outline: none;
+      }
+    }
+  }
+
+  .main-nav__item--current {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: -25px;
+      left: 0;
+
+      height: 3px;
+
+      content: "";
+
+      background-color: #826550;
+    }
+  }
+
+  .main-nav__user-nav {
+    display: flex;
+
+    width: 50px;
+
+    align-items: center;
+    @include list-reset;
+  }
+
+  .main-nav__user-item--login {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+  }
+
+  .main-nav__login-link {
+    font-size: 0;
+
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .main-nav__login-logo {
+    pointer-events: none;
+
+    opacity: 0.3;
+
+    fill: #ffffff;
+  }
+
+  .main-nav__login-link:focus + .main-nav__login-logo {
+    opacity: 1;
+
+    fill: #826550;
+  }
+
+  .main-nav__login-link:hover + .main-nav__login-logo {
+    opacity: 1;
+
+    fill: #826550;
+  }
+
+  .main-nav__login-link:active + .main-nav__login-logo {
+    opacity: 0.3;
+
+    fill: #ffffff;
   }
 }

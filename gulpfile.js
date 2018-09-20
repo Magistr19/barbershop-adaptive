@@ -168,9 +168,9 @@ gulp.task("build", function(done) {
     "style",
     "scripts",
     "images",
+    "webp",
     "sprite",
     "html",
-    "webp",
     done  /* Самым последним вызовом функции run должна быть функция, которая была передана как аргумент */
   );
 });

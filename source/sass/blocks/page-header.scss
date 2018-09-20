@@ -1,7 +1,6 @@
 
 .page-header__container {
   width: $mobile-size;
-  min-height: 135px;
   margin: 0 auto;
 }
 
@@ -25,5 +24,34 @@
 
   &--bottom {
     display: none;
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .page-header__container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .page-header__logo-container {
+    height: 400px;
+
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: cover;
+
+    order: 2;
+  }
+
+  .page-header__logo {
+    width: 370px;
+    margin-top: 40px;
+
+    &--top {
+      display: block;
+    }
   }
 }
