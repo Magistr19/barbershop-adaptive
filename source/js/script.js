@@ -26,6 +26,7 @@ var modalLogin = document.querySelector ('.modal-login');
 var closeBtn = document.querySelector ('.modal-login__close');
 
 loginLink.addEventListener("click", function(evt) {
+  evt.preventDefault();
   toogleBtn.classList.remove ('main-nav__toogle--open');
   mobileNav.classList.remove ('main-nav__items-wrapper--open');
   modalLogin.classList.add ('modal-login--show');
