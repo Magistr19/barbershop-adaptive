@@ -114,6 +114,8 @@
   }
 
   .main-nav__item {
+    position: relative;
+    z-index: 1;
     a {
       font-weight: 700;
       line-height: 24px;
