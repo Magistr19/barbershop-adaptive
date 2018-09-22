@@ -47,6 +47,9 @@
 .statistic__table {
   width: 100%;
 
+  border-spacing: 0;
+  border-collapse: collapse;
+
   tr {
     display: flex;
 
@@ -95,6 +98,8 @@
   font-size: 18px;
   line-height: 18px;
 
+  width: 150px;
+
   text-align: right;
 
   color: #f7f4f1;
@@ -128,13 +133,14 @@
 
   .statistic__container {
     width: 640px;
+    margin-top: -185px;
     padding-right: 64px;
     padding-left: 64px;
-    margin-top: -185px;
   }
 
   .statistic__header {
     position: relative;
+
     display: flex;
 
     box-sizing: border-box;
@@ -150,11 +156,13 @@
       position: absolute;
       top: 10px;
       left: -31px;
+
       content: "";
-      border: 21px solid transparent;
-      border-bottom-color: #ffffff;
-      border-right-width: 0;
       transform: rotate(-90deg);
+
+      border: 21px solid transparent;
+      border-right-width: 0;
+      border-bottom-color: #ffffff;
     }
   }
 
@@ -175,9 +183,9 @@
     box-sizing: border-box;
     width: 225px;
     margin: 0;
+    margin-top: 4px;
     padding-right: 0;
     padding-left: 30px;
-    margin-top: 4px;
 
     text-align: left;
   }
@@ -193,8 +201,6 @@
       display: none;
     }
   }
-
-
 
   .statistic__table {
     tr:nth-child(2n-1) {
@@ -247,6 +253,7 @@
     font-size: 20px;
     line-height: 27px;
 
+    width: auto;
     margin-top: 8px;
 
     text-align: left;
@@ -254,5 +261,49 @@
     br {
       display: none;
     }
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .statistic__container {
+    display: flex;
+
+    width: 960px;
+    margin-top: -160px;
+    padding-right: 120px;
+    padding-left: 120px;
+  }
+
+  .statistic__header {
+    flex-direction: column;
+
+    width: 33.3%;
+    padding-right: 60px;
+
+    flex-shrink: 0;
+    justify-content: space-between;
+
+    &::before {
+      top: 27px;
+    }
+  }
+
+  .statistic__info {
+    width: auto;
+    padding-right: 0;
+  }
+
+  .statistic__reference {
+    width: auto;
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  .statistic__legend--top {
+    margin-top: 0;
+  }
+
+  .statistic__table {
+    width: 66%;
   }
 }
