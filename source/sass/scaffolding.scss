@@ -48,3 +48,11 @@ body {
 
   border: 0 !important;
 }
+
+
+/* If minificator deleted the needed space around <br> */
+.space {
+  &::after {
+    content: " ";
+  }
+}

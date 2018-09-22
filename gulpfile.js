@@ -63,7 +63,10 @@ gulp.task("html", function() {       /* название таска*/
     .pipe(posthtml([
       include()                      /* конвертирует все <include></include> */
     ]))
-    .pipe(htmlmin({collapseWhitespace: true}))   /* Минификация HTML*/
+    .pipe(htmlmin({                  /* Минификация HTML*/
+      collapseWhitespace: true,
+      ignoreCustomFragments: [ /<br>\s/gi ]
+    }))
     .pipe(gulp.dest("./build"))      /* куда кидает файлы */
     .pipe(server.stream());          /* команда перезагрузки сервера в браузере */
 });
