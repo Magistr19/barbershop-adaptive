@@ -177,15 +177,18 @@
 
   .features__list {
     display: flex;
+
+    padding-bottom: 40px;
+
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding-bottom: 40px;
   }
 
   .features__item {
-    margin-left: 42px;
     margin-right: 42px;
+    margin-left: 42px;
     padding-top: 202px;
+
     background-position: center top 77px;
     &:nth-child(n+2) {
       display: block;
