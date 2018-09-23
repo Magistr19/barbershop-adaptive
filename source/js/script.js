@@ -44,3 +44,5 @@ overlay.addEventListener("click", function(evt) {
   overlay.classList.remove ('overlay--show');
 });
 
+/* Slider features for mobile */
+

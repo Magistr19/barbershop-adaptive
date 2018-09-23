@@ -19,9 +19,9 @@
     transform: rotate(180deg);
 
     border: 160px solid transparent;
-    border-bottom-color: #242424;
-    border-bottom-width: 34px;
     border-top-width: 0;
+    border-bottom-width: 34px;
+    border-bottom-color: #242424;
   }
 }
 
@@ -86,4 +86,16 @@
   margin: 0 auto;
   margin-top: 30px;
   padding-bottom: 15px;
+}
+
+/* No-js */
+
+.no-js {
+  .features__item {
+    display: block;
+  }
+
+  .features__slider-toogle {
+    display: none;
+  }
 }
