@@ -1,0 +1,40 @@
+.slider-toogle {
+  position: relative;
+
+  display: flex;
+
+  width: 75px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.slider-toogle li {
+  margin-right: 25px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.slider-toogle label {
+  &::before {
+    display: block;
+
+    width: 6px;
+    height: 6px;
+
+    content: "";
+    cursor: pointer;
+    transform: rotate(45deg);
+
+    border: 1px solid #a5a5a5;
+  }
+}
+
+.slider-toogle input:checked + label {
+  &::before {
+    border-color: #ffffff;
+    background-color: #ffffff;
+  }
+}
