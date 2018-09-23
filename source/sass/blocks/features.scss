@@ -90,12 +90,18 @@
 
 /* No-js */
 
-.no-js {
-  .features__item {
-    display: block;
-  }
+@media (max-width: $mobile-size-only) {
+  .no-js {
+    .features__item {
+      display: block;
+    }
 
-  .features__slider-toogle {
-    display: none;
+    .features__slider-toogle {
+      display: none;
+    }
   }
+}
+
+@media (max-width: $tablet-size-only) {
+
 }
