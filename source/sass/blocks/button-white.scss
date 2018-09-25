@@ -1,0 +1,21 @@
+.button-white {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+
+  display: flex;
+
+  box-sizing: border-box;
+  width: 280px;
+  height: 50px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: #000000;
+  border: 1px solid #e5ddd5;
+  background-color: #f8f5f2;
+
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,144 @@
+.news__container {
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 67px;
+  padding-bottom: 28px;
+
+  border-bottom: 1px solid #e5ddd5;
+  background-color: #f8f5f2;
+}
+
+.news__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+
+  margin: 0;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.news__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.news__item {
+  display: flex;
+
+  width: 280px;
+  min-height: 70px;
+  margin: 0 auto;
+  margin-top: 16px;
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #e5ddd5;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &:first-child {
+    margin-top: 28px;
+  }
+
+  &:nth-last-child(2) {
+    border-bottom: none;
+  }
+
+  &:last-child {
+    display: none;
+  }
+}
+
+.news__time {
+  font-size: 16px;
+  line-height: 16px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 50px;
+  margin-top: 11px;
+  padding-top: 9px;
+  padding-bottom: 3px;
+
+  text-align: center;
+
+  color: #ffffff;
+  background-color: #000000;
+
+  justify-content: center;
+
+  b {
+    font-size: 30px;
+    line-height: 23px;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -9.5px;
+    left: 0;
+
+    content: "";
+    transform: rotate(180deg);
+
+    border: 25px solid transparent;
+    border-top-width: 0;
+    border-bottom-width: 10px;
+    border-bottom-color: #000000;
+  }
+}
+
+.news__description {
+  font-size: 18px;
+  line-height: 27px;
+
+  width: 210px;
+  margin: 0;
+
+  text-decoration: none;
+
+  color: #000000;
+
+  order: 2;
+
+  &:hover {
+    text-decoration: underline;
+
+    color: #826550;
+  }
+
+  &:active {
+    color: #6a4d38;
+  }
+}
+
+.news__description:hover + .news__time {
+  color: #ffffff;
+  background-color: #826550;
+
+  &::after {
+    border-bottom-color: #826550;
+  }
+}
+
+.news__description:active + .news__time {
+  color: rgba(255,255,255, 0.3);
+  background-color: #6a4d38;
+
+  &::after {
+    border-bottom-color: #6a4d38;
+  }
+}
+
+.news__button-show {
+  margin: 0 auto;
+  margin-top: 5px;
+}
