@@ -18,4 +18,13 @@
 
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    border-color: #d5c9bd;
+  }
+
+  &:active {
+    color: rgba(255,255,255, 0.3);
+    background-color: #d5c9bd;
+  }
 }
