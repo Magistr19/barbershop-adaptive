@@ -38,3 +38,16 @@
     background-color: #ffffff;
   }
 }
+
+.slider-toogle--white {
+  label &::before {
+    border: 1px solid #616160;
+  }
+
+  input:checked + label {
+    &::before {
+      border-color: #353535;
+      background-color: #353535;
+    }
+  }
+}

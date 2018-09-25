@@ -1,4 +1,6 @@
 .news__container {
+  z-index: 1;
+
   width: 320px;
   margin: 0 auto;
   padding-top: 67px;
@@ -164,8 +166,8 @@
     padding-top: 88px;
     padding-right: 64px;
     padding-bottom: 36px;
-    padding-left: 64px;
     padding-bottom: 39px;
+    padding-left: 64px;
 
     border-bottom: 1px solid #e5ddd5;
   }
