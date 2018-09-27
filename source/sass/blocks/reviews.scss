@@ -13,7 +13,7 @@
 
   &::after {
     position: absolute;
-    bottom: -193px;
+    bottom: -194px;
     left: 0;
 
     content: "";
@@ -37,6 +37,11 @@
   text-transform: uppercase;
 
   color: #000000;
+}
+
+.reviews__previous,
+.reviews__next {
+  display: none;
 }
 
 .reviews__list {
@@ -67,7 +72,7 @@
 
   border: 1px solid #ede8e2;
 
-  a {
+  img {
     width: 100%;
     height: auto;
   }
@@ -100,4 +105,123 @@
 .reviews__slider-toogle {
   margin: 0 auto;
   margin-top: 29px;
+}
+
+@media (min-width: $tablet-size) {
+  .reviews {
+    background-color: #f8f5f2;
+  }
+
+  .reviews__container {
+    width: 640px;
+    margin: 0 auto;
+    padding-top: 45px;
+    padding-right: 64px;
+    padding-bottom: 71px;
+    padding-left: 64px;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .reviews__content-container {
+    display: flex;
+  }
+
+  .reviews__title {
+    font-size: 40px;
+
+    text-align: left;
+  }
+
+  .reviews__list {
+    width: 540px;
+    margin: 0 auto;
+    margin-top: 47px;
+  }
+
+  .reviews__item {
+    margin-top: 0;
+    padding-top: 30px;
+
+    border: 1px solid #e5ddd5;
+    border-right-width: 0;
+    border-left-width: 0;
+
+    justify-content: flex-start;
+  }
+
+  .reviews__image-container {
+    width: 80px;
+    height: 80px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+
+    border: none;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .reviews__info-container {
+    width: 400px;
+  }
+
+  .reviews__description {
+    padding-bottom: 15px;
+  }
+
+  .reviews__previous,
+  .reviews__next {
+    display: flex;
+
+    width: 50px;
+    margin-top: 47px;
+
+    border: 1px solid #e5ddd5;
+    background-color: transparent;
+
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      content: "";
+
+      border: 6px solid #000000;
+      border-top-color: transparent;
+      border-right-width: 0;
+      border-bottom-color: transparent;
+      border-left-width: 12px;
+    }
+  }
+
+  .reviews__previous {
+    &::after {
+      border-right-width: 12px;
+      border-left-width: 0;
+    }
+  }
+
+  .reviews__slider-toogle {
+    position: absolute;
+    bottom: 68px;
+    left: 50%;
+
+    margin-left: -63px;
+    padding-right: 25px;
+    padding-left: 25px;
+
+    background-color: #f8f5f2;
+  }
+
+  .button-white.reviews__button-comment {
+    position: absolute;
+    top: 38px;
+    right: 63px;
+
+    width: 160px;
+  }
 }
