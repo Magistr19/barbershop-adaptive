@@ -13,7 +13,7 @@ var sass = require("gulp-sass");
 /* Запирает все ошибки в себя, не останавливая работу скрипта */
 var plumber = require("gulp-plumber");
 
-/* POSTCSS c автопрефикером */
+/* POSTCSS c автопрефиксером */
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 
@@ -29,6 +29,9 @@ var minify = require("gulp-csso");
 
 /* Минификация JS*/
 var uglify = require("gulp-uglify");
+
+/* Делает нечитаемым JS*/
+var obfuscate = require('gulp-obfuscate');
 
 /* Отдельный плагин для переименования файла */
 var rename = require("gulp-rename");
@@ -50,7 +53,7 @@ var run = require("run-sequence");
 var del = require("del");
 
 /* POSTHTML для минификации HTML с плагином для вставки
-других файлов в HTML файлс помощью <include src=""></include> */
+других файлов в HTML файл с помощью <include src=""></include> */
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 
@@ -80,7 +83,6 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("./build/css"))
     .pipe(minify({
       restructure: false          /*Отключаем смешивание общих стилей, чтобы не страдать*/
     }))
@@ -94,6 +96,7 @@ gulp.task("scripts", function () {
   return gulp.src("source/js/**/*.js")
     .pipe(plumber())
     .pipe(uglify())
+    .pipe(obfuscate())
     .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("build/js"))
     .pipe(server.stream());
@@ -104,7 +107,7 @@ gulp.task("images", function() {
   return gulp.src("./source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([    /* imagemin сам по себе содержит в себе множество плагинов (работа с png,svg,jpg и тд) */
       imagemin.optipng({optimizationLevel: 3}),  /* 1 - максимальное сжатие, 3 - безопасное сжатие, 10 - без сжатия */
-      imagemin.jpegtran({progressive: true}),    /* прогрессивная загрузка jpg (сначала пиксельная, позже проявляется) */
+      imagemin.jpegtran({progressive: true}),    /* прогрессивная загрузка jpg (изображение постепенно прорисовывается при загрузке) */
       imagemin.svgo()   /*Минификация svg от лишних тегов*/
       ]))
     .pipe(gulp.dest("./build/img"));
@@ -117,7 +120,7 @@ gulp.task("webp", function() {
     .pipe(gulp.dest("./build/img"));
 });
 
-/* Сборка спрайта */
+/* Сборка спрайта SVG */
 gulp.task("sprite", function() {
   return gulp.src("./build/img/inline-icons/*.svg")
     .pipe(svgstore({    /* Делает спрайт из SVG-файлов */
@@ -141,7 +144,7 @@ gulp.task("copy", function() {
   .pipe(gulp.dest("build"));
 });
 
-/* Таск для удаления */
+/* Таск для удаления прошлой сборки */
 gulp.task("clean", function() {
   return del("build");
 });
@@ -158,11 +161,11 @@ gulp.task("images-watch", function() {
     "images",
     "webp",
     "sprite",
-    "html"
+    "html"      /* Это чтобы перезагрузить страничку*/
     );
 });
 
-/* Таск запуска npm run build */
+/* Таск компиляции всего проекта(npm run build) */
 gulp.task("build", function(done) {
   run(
     "clean",
@@ -190,7 +193,7 @@ gulp.task("serve", function() {
 
   /* Ватчеры следящие за изменениями файлов */
   /* Например, препроцессорные ватчеры (следим за всеми Sass файлами во всех папках внутри папки sass),
-   вторым аргументом передаем какой таск нужно запустить если один из файлов запустился */
+   вторым аргументом передаем какой таск нужно запустить если один из файлов изменился */
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("source/*.html", ["html"]);
   gulp.watch("source/js/*.js", ["scripts"]);
