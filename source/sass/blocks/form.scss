@@ -171,11 +171,6 @@
     &:active::before {
       background-color: #d5c9bd;
     }
-
-    img {
-      display: block;
-      margin: 0 auto;
-    }
   }
 
   input:checked + label {
@@ -196,6 +191,11 @@
       border-color: #d5c9bd;
       background-color: #d5c9bd;
     }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
   }
 }
 
