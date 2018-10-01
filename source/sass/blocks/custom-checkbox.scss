@@ -1,0 +1,39 @@
+.custom-checkbox {
+  label {
+    font-size: 18px;
+    line-height: 30px;
+
+    position: relative;
+
+    display: inline-block;
+
+    &::before {
+      position: absolute;
+
+      box-sizing: border-box;
+      width: 36px;
+      height: 36px;
+
+      content: "";
+
+      border: 1px solid #e5ddd5;
+    }
+
+    &:hover::before {
+      border-color: #d5c9bd;
+    }
+
+    &:active::before {
+      background-color: #d5c9bd;
+    }
+  }
+
+  input[type="checkbox"]:checked + label {
+    &::before {
+      background-image: url("../img/marked.svg");
+      background-repeat: no-repeat;
+      background-size: 22px 16px;
+      background-position: 6px 9px;
+    }
+  }
+}

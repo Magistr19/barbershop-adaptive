@@ -1,0 +1,245 @@
+.form__container {
+  position: relative;
+
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 28px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+
+  background-color: #f9f5f2;
+
+  &::after {
+    position: absolute;
+    bottom: -34.5px;
+    left: 0;
+
+    content: "";
+    transform: rotate(180deg);
+
+    border: 160px solid transparent;
+    border-top-width: 0;
+    border-bottom-width: 35px;
+    border-bottom-color: #f9f5f2;
+  }
+}
+
+.form__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+
+  margin: 0;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.form__redirect-index {
+  display: none;
+}
+
+.form__fullname {
+  margin: 0;
+  margin-top: 32px;
+  padding: 0;
+
+  border: none;
+}
+
+.form__name {
+  margin-top: 6px;
+}
+
+.form__patronymic {
+  margin-top: 6px;
+}
+
+.form__contact-feedback {
+  margin: 0;
+  margin-top: 32px;
+  padding: 0;
+
+  border: none;
+}
+
+.form__email {
+  margin-top: 6px;
+}
+
+.form__message {
+  margin-top: 32px;
+}
+
+.form__beards {
+  margin: 0;
+  margin-top: 34px;
+  padding: 0;
+
+  border: none;
+}
+
+.form__choose-beard {
+  font-size: 20px;
+  line-height: 27px;
+
+  display: block;
+
+  width: 100%;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.form__beards-list {
+  display: flex;
+
+  margin: 0;
+  margin-left: -40px;
+  margin-top: 13px;
+  padding: 0;
+  padding-left: 20px;
+  list-style: none;
+
+  flex-wrap: wrap;
+}
+
+
+
+.form__beards-container {
+  margin-left: 40px;
+  min-width: 59px;
+}
+
+.form__beards-item {
+  label {
+    font-size: 18px;
+    line-height: 24px;
+
+    position: relative;
+
+    display: block;
+
+    margin-top: 84px;
+    margin-bottom: 12px;
+
+    text-align: center;
+
+    &::before {
+      position: absolute;
+      top: -61px;
+      left: 50%;
+
+      box-sizing: border-box;
+      width: 52px;
+      height: 52px;
+      margin-left: -26px;
+
+      content: "";
+
+      border: 1px solid #f1ede8;
+      border-radius: 50%;
+      background-color: #ffffff;
+    }
+
+    &::after {
+      position: absolute;
+      top: -44px;
+      left: 50%;
+
+      box-sizing: border-box;
+      width: 18px;
+      height: 18px;
+      margin-left: -9px;
+
+      content: "";
+
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      background-color: #ffffff;
+    }
+
+    &:hover::before {
+      border-color: #d5c9bd;
+    }
+
+    &:active::before {
+      background-color: #d5c9bd;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  input:checked + label {
+    &::after {
+      border-color: #f1ede8;
+      background-color: #ffffff;
+    }
+  }
+
+  input:hover:checked + label {
+    &::after {
+      border-color: #d5c9bd;
+    }
+  }
+
+  input:active:checked + label {
+    &::after {
+      border-color: #d5c9bd;
+      background-color: #d5c9bd;
+    }
+  }
+}
+
+.form__addition {
+  margin: 0;
+  margin-top: 36px;
+  padding: 0;
+  border: none;
+}
+
+.form__addition-service {
+  font-size: 20px;
+  line-height: 27px;
+
+  display: block;
+
+  width: 100%;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.form__checkbox-list {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.form__checkbox-item {
+
+  label {
+    margin-left: 60px;
+    margin-top: 27px;
+
+    &::before {
+      left: -60px;
+      top: -1px;
+    }
+  }
+}
+
+.form__sumbit {
+  margin-top: 49px;
+}
