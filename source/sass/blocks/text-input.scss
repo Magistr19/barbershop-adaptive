@@ -35,7 +35,14 @@
 .text-input__form-patronymic {
   @media (min-width: $tablet-size) {
     width: 213px;
+
     border-left-width: 0;
+  }
+
+  @media (min-width: $desktop-size) {
+    width: 295px;
+
+    border-left-width: 1px;
   }
 }
 
@@ -45,6 +52,12 @@
   }
 }
 
+.text-input--form-tel,
+.text-input--form-email {
+  @media (min-width: $desktop-size) {
+    width: 462px;
+  }
+}
 
 .text-input--textarea {
   height: 112px;

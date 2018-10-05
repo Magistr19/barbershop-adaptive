@@ -397,3 +397,41 @@
     margin-top: 66px;
   }
 }
+
+@media (min-width: $desktop-size) {
+  .form__container {
+    width: 960px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 88px;
+  }
+
+  .form__fullname {
+    justify-content: space-between;
+  }
+
+  .form__contact-feedback {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__email {
+    margin-top: 0;
+  }
+
+  .form__beards {
+    margin-top: 67px;
+  }
+
+  .form__beards-list {
+    margin-top: 18px;
+  }
+
+  .form__beards-container {
+    margin-left: 125px;
+  }
+
+  .form__sumbit {
+    margin-top: 88px;
+  }
+}
