@@ -24,11 +24,35 @@
     opacity: 1;
     color: #000000;
   }
+
+  @media (min-width: $tablet-size) {
+    height: 70px;
+  }
 }
+
+.text-input__form-surname,
+.text-input__form-name,
+.text-input__form-patronymic {
+  @media (min-width: $tablet-size) {
+    width: 213px;
+    border-left-width: 0;
+  }
+}
+
+.text-input__form-surname {
+  @media (min-width: $tablet-size) {
+    border-left-width: 1px;
+  }
+}
+
 
 .text-input--textarea {
   height: 112px;
   padding-top: 8px;
 
   resize: none;
+
+  @media (min-width: $tablet-size) {
+    height: 210px;
+  }
 }

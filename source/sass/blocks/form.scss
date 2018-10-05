@@ -84,11 +84,13 @@
 
 .form__choose-beard {
   font-size: 20px;
+  font-weight: 400;
   line-height: 27px;
 
   display: block;
 
   width: 100%;
+  margin: 0;
 
   text-align: center;
   text-transform: uppercase;
@@ -100,10 +102,11 @@
   display: flex;
 
   margin: 0;
-  margin-left: -40px;
   margin-top: 13px;
+  margin-left: -40px;
   padding: 0;
   padding-left: 20px;
+
   list-style: none;
 
   flex-wrap: wrap;
@@ -112,8 +115,8 @@
 
 
 .form__beards-container {
-  margin-left: 40px;
   min-width: 59px;
+  margin-left: 40px;
 }
 
 .form__beards-item {
@@ -195,6 +198,7 @@
 
   img {
     display: block;
+
     margin: 0 auto;
   }
 }
@@ -203,16 +207,19 @@
   margin: 0;
   margin-top: 36px;
   padding: 0;
+
   border: none;
 }
 
 .form__addition-service {
   font-size: 20px;
+  font-weight: 400;
   line-height: 27px;
 
   display: block;
 
   width: 100%;
+  margin: 0;
 
   text-align: center;
   text-transform: uppercase;
@@ -224,22 +231,169 @@
   margin: 0;
   margin-top: 10px;
   padding: 0;
+
   list-style: none;
 }
 
 .form__checkbox-item {
-
   label {
-    margin-left: 60px;
     margin-top: 27px;
+    margin-left: 60px;
 
     &::before {
-      left: -60px;
       top: -1px;
+      left: -60px;
     }
   }
 }
 
 .form__sumbit {
   margin-top: 49px;
+}
+
+@media (min-width: $tablet-size) {
+  .form {
+    background-color: #f8f5f2;
+  }
+
+  .form__container {
+    width: 640px;
+    padding-top: 62px;
+    padding-right: 64px;
+    padding-bottom: 76px;
+    padding-left: 64px;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .form__title {
+    font-size: 40px;
+
+    text-align: left;
+  }
+
+  .form__redirect-index {
+    position: absolute;
+    top: 53px;
+    right: 64px;
+
+    display: flex;
+  }
+
+  .form__fullname {
+    display: flex;
+
+    margin-top: 78px;
+  }
+
+  .form__name {
+    margin-top: 0;
+  }
+
+  .form__patronymic {
+    margin-top: 0;
+  }
+
+  .form__contact-feedback {
+    margin-top: 35px;
+  }
+
+  .form__email {
+    margin-top: 35px;
+  }
+
+  .form__message {
+    margin-top: 35px;
+  }
+
+  .form__beards {
+    margin-top: 51px;
+  }
+  .form__beards-container {
+    margin-left: 60px;
+  }
+
+  .form__beards-item {
+    label {
+      font-size: 24px;
+      line-height: 30px;
+
+      margin-top: 107px;
+      margin-bottom: 29px;
+
+      &::before {
+        top: -74px;
+      }
+
+      &::after {
+        top: -57px;
+      }
+    }
+  }
+
+  .form__addition {
+    margin-top: 56px;
+  }
+
+  .form__addition-service,
+  .form__choose-beard {
+    font-size: 30px;
+    line-height: 30px;
+
+    display: flex;
+    flex-direction: row;
+
+    width: auto;
+
+    align-items: center;
+
+    &::before {
+      height: 1px;
+      margin-right: 25px;
+
+      content: "";
+
+      background-color: #e5ddd5;
+
+      flex-grow: 1;
+    }
+
+    &::after {
+      height: 1px;
+      margin-left: 25px;
+
+      content: "";
+
+      background-color: #e5ddd5;
+
+      flex-grow: 1;
+    }
+  }
+
+  .form__checkbox-list {
+    display: flex;
+
+    margin-top: 14px;
+
+    flex-wrap: wrap;
+  }
+
+  .form__checkbox-item {
+    label {
+      box-sizing: border-box;
+      width: 260px;
+      margin-top: 59px;
+      padding-right: 20px;
+
+      &::before {
+        top: -4px;
+      }
+    }
+  }
+
+  .form__sumbit {
+    margin-top: 66px;
+  }
 }

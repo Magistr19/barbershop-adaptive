@@ -78,14 +78,14 @@
   <section class="form">
     <form class="form__container" action="https://echo.htmlacademy.ru" method="post">
       <h1 class="form__title">Запись на стрижку</h1>
-      <a class="form__redirect-index" href="index.html">На главную</a>
+      <a class="button-white button-white--redirect-index form__redirect-index" href="index.html">На главную</a>
       <fieldset class="form__fullname">
         <label class="screen-reader" for="form__surname">Фамилия:</label>
-        <input class="text-input form__surname" id="form__surname" name="form__surname" type="text" placeholder="Фамилия">
+        <input class="text-input text-input__form-surname form__surname" id="form__surname" name="form__surname" type="text" placeholder="Фамилия">
         <label class="screen-reader" for="form__name">Имя:</label>
-        <input class="text-input form__name" id="form__name" name="form__name" type="text" placeholder="Имя">
+        <input class="text-input text-input__form-name form__name" id="form__name" name="form__name" type="text" placeholder="Имя">
         <label class="screen-reader" for="form__patronymic">Отчество:</label>
-        <input class="text-input form__patronymic" id="form__patronymic" name="form__patronymic" type="text" placeholder="Отчество">
+        <input class="text-input text-input__form-patronymic form__patronymic" id="form__patronymic" name="form__patronymic" type="text" placeholder="Отчество">
       </fieldset>
       <fieldset class="form__contact-feedback">
         <label class="screen-reader" for="form__tel">Контактный телефон:</label>
@@ -96,7 +96,7 @@
       <label class="screen-reader" for="form__message">Доп. информация для мастера:</label>
       <textarea class="text-input text-input--textarea form__message" name="form__message" id="form__message" placeholder="Доп. информация для мастера"></textarea>
       <fieldset class="form__beards">
-        <legend class="form__choose-beard">Выберите модель бороды:</legend>
+        <h3 class="form__choose-beard">Выберите модель бороды:</h3>
         <ul class="form__beards-list">
           <li class="form__beards-item">
             <div class="form__beards-container">
@@ -136,7 +136,7 @@
         </ul>
       </fieldset>
       <fieldset class="form__addition">
-        <legend class="form__addition-service">Дополнительные услуги:</legend>
+        <h3 class="form__addition-service">Дополнительные услуги:</h3>
         <ul class="form__checkbox-list">
           <li class="custom-checkbox form__checkbox-item">
             <input class="screen-reader" type="checkbox" name="form__checkbox-1" id="form__checkbox-1" checked>
