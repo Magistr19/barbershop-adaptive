@@ -1,4 +1,5 @@
 .news__container {
+  border-top: 1px solid #242424;
   z-index: 1;
 
   width: 320px;
@@ -157,10 +158,12 @@
 @media (min-width: $tablet-size) {
   .news {
     background-color: #f8f5f2;
+    border-top: 1px solid #353535;
   }
 
   .news__container {
     position: relative;
+    border-top-width: 0;
 
     width: 640px;
     padding-top: 88px;

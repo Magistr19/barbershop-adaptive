@@ -52,7 +52,7 @@
 
   tr {
     display: flex;
-
+    width: 320px;
     flex-wrap: wrap;
   }
 
@@ -133,18 +133,18 @@
 
   .statistic__container {
     width: 640px;
-    margin-top: -185px;
     padding-right: 64px;
     padding-left: 64px;
   }
 
   .statistic__header {
-    position: relative;
+    position: absolute;
 
     display: flex;
 
     box-sizing: border-box;
     width: 640px;
+    margin-top: -185px;
     padding-top: 27px;
     padding-right: 80px;
     padding-bottom: 29px;
@@ -203,6 +203,10 @@
   }
 
   .statistic__table {
+    tr {
+      width: 100%;
+    }
+
     tr:nth-child(2n-1) {
       td:nth-child(2n-1) {
         background-color: #404040;
@@ -269,15 +273,16 @@
     display: flex;
 
     width: 960px;
-    margin-top: -160px;
     padding-right: 120px;
     padding-left: 120px;
   }
 
   .statistic__header {
+    position: relative;
     flex-direction: column;
 
     width: 320px;
+    margin-top: -160px;
     padding-right: 60px;
 
     flex-shrink: 0;
@@ -301,5 +306,9 @@
 
   .statistic__legend--top {
     margin-top: 0;
+  }
+
+  .statistic__table {
+    margin-top: -160px;
   }
 }

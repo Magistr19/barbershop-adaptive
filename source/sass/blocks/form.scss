@@ -352,6 +352,7 @@
     &::before {
       height: 1px;
       margin-right: 25px;
+      display: inline-block;
 
       content: "";
 
@@ -363,6 +364,7 @@
     &::after {
       height: 1px;
       margin-left: 25px;
+      display: inline-block;
 
       content: "";
 
