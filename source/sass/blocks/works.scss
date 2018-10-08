@@ -1,0 +1,193 @@
+.works__container {
+  position: relative;
+
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 27px;
+  padding-right: 20px;
+  padding-bottom: 34px;
+  padding-left: 20px;
+
+  background-color: #f8f5f2;
+
+
+  &::after {
+    position: absolute;
+    bottom: -33px;
+    left: 0;
+
+    content: "";
+    transform: rotate(180deg);
+
+    border: 160px solid transparent;
+    border-top-width: 0;
+    border-bottom-width: 34px;
+    border-bottom-color: #f8f5f2;
+  }
+}
+
+.works__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+
+  margin: 0;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.works__List {
+  margin: 0;
+  margin-top: 31px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.works__item {
+  margin-top: 20px;
+}
+
+.works__item--of-day {
+  .works__image-container {
+    position: relative;
+
+    width: 280px;
+    height: 480px;
+
+    &::before {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 27px;
+
+      position: absolute;
+      z-index: 1;
+      bottom: 29px;
+      left: 0;
+
+      box-sizing: border-box;
+      width: 168px;
+      height: 50px;
+      padding-top: 11px;
+      padding-left: 18px;
+
+      content: "Работа месяца";
+      text-transform: uppercase;
+
+      color: #ffffff;
+      background-color: #826550;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: 1;
+      bottom: 29px;
+      left: 168px;
+
+      content: "";
+
+      border: 25px solid transparent;
+      border-top-color: #826550;
+      border-right-width: 8px;
+      border-bottom-color: #826550;
+      border-left-width: 0;
+    }
+  }
+}
+
+.works__image-container {
+  width: 280px;
+  height: 176px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.works__description-container {
+  box-sizing: border-box;
+  width: 280px;
+  padding-top: 19px;
+  padding-right: 33px;
+  padding-bottom: 29px;
+  padding-left: 22px;
+
+  border: 1px solid #e5ddd5;
+  border-top-width: 0;
+}
+
+.works__author {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 27px;
+
+  margin: 0;
+
+  color: #000000;
+}
+
+.works__info {
+  font-size: 18px;
+  line-height: 24px;
+
+  margin: 0;
+  margin-top: 15px;
+
+  color: #000000;
+}
+
+.works__options-list {
+  display: flex;
+
+  margin: 0;
+  margin-top: 3px;
+  margin-left: -33px;
+  padding: 0;
+
+  list-style: none;
+
+  flex-wrap: wrap;
+}
+
+.works__option-item {
+  font-size: 16px;
+  line-height: 27px;
+
+  margin-top: 15px;
+  margin-left: 33px;
+
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.works__option-item--beard {
+  margin-left: 27px;
+  padding-left: 40px;
+
+  background-image: url("../img/beard-1.svg");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 23px 21px;
+}
+
+.works__option-item--mustache {
+  margin-left: 20px;
+  padding-left: 58px;
+
+  background-image: url("../img/mustache.svg");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
+.works__option-item--haircut {
+  padding-left: 36px;
+
+  background-image: url("../img/haircut.svg");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}

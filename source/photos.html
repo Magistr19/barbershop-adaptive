@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Запись на стрижку - Барбершоп «Бородинский»</title>
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+<body class="no-js inner-page">
+  <div style="display: none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header__container">
+      <div class="page-header__logo-container">
+        <svg class="page-header__logo" role="img" width="369.5" height="153">
+          <use xlink:href="#barbershop-logo"></use>
+        </svg>
+      </div>
+      <nav class="main-nav">
+        <div class="main-nav__btn-wrapper">
+          <button class="main-nav__toogle"></button>
+        </div>
+        <div class="main-nav__items-wrapper">
+          <ul class="main-nav__site-nav">
+            <li class="main-nav__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item main-nav__item--current">
+              <a>Наши работы</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html">Записаться</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Контакты</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </li>
+          </ul>
+          <ul class="main-nav__user-nav">
+            <li class="main-nav__user-item main-nav__user-item--login">
+              <a class="main-nav__login-link" href="#">Войти</a>
+              <svg class="main-nav__login-logo" aria-hidden="true" width="16" height="16">
+              <use xlink:href="#login-logo"></use>
+            </svg>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="modal-login">
+    <h2 class="modal-login__title">Личный кабинет</h2>
+    <p class="modal-login__info">Введите свой логин и пароль, чтобы войти</p>
+    <form class="modal-login__form" action="https://echo.htmlacademy.ru" method="post">
+      <label class="screen-reader" for="modal-login__username">Ваш логин: </label>
+      <div class="modal-login__username-container">
+        <input type="text" id="modal-login__username" class="modal-login__username" name="user-login" placeholder="Логин">
+      </div>
+      <label class="screen-reader" for="modal-login__password">Ваш пароль: </label>
+      <input type="password" id="modal-login__password" class="modal-login__password" name="user-pass" placeholder="Пароль">
+      <div class="modal-login__rember-wrapper">
+        <input class="modal-login__remember screen-reader" id="modal-login__remember" name="remember-me" type="checkbox">
+        <label class="modal-login__remember-label" for="modal-login__remember">Запомнить меня</label>
+        <a class="modal-login__forgot-pass" href="#">Забыл пароль!</a>
+      </div>
+      <div class="modal-login__btns-wrapper">
+        <button class="modal-login__enter" type="submit">Войти</button>
+        <button class="modal-login__close" type="button">Закрыть</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="works">
+    <div class="works__container">
+      <h1 class="works__title">Наши работы</h1>
+      <ul class="works__List">
+        <li class="works__item works__item--of-day">
+          <div class="works__image-container">
+            <img src="img/work-1-mobile.jpg" alt="Фотография работы">
+          </div>
+          <div class="works__description-container">
+            <h3 class="works__author">Лжепётр Мчиславский</h3>
+            <blockquote class="works__info">Где я только не стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!</blockquote>
+            <ul class="works__options-list">
+              <li class="works__option-item works__option-item--haircut">Стрижка</li>
+              <li class="works__option-item works__option-item--beard">Бритье</li>
+              <li class="works__option-item works__option-item--mustache">Усы</li>
+            </ul>
+          </div>
+        </li>
+        <li class="works__item">
+          <div class="works__image-container">
+            <img src="img/work-2-mobile.jpg" alt="Фотография работы">
+          </div>
+          <div class="works__description-container">
+            <h3 class="works__author">Саша Мальцев</h3>
+            <blockquote class="works__info">Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?</blockquote>
+            <ul class="works__options-list">
+              <li class="works__option-item works__option-item--haircut">Стрижка</li>
+            </ul>
+          </div>
+        </li>
+        <li class="works__item">
+          <div class="works__image-container">
+            <img src="img/work-3-mobile.jpg" alt="Фотография работы">
+          </div>
+          <div class="works__description-container">
+            <h3 class="works__author">Владимир Иваныч</h3>
+            <blockquote class="works__info">К зимнему сезону — готов!</blockquote>
+            <ul class="works__options-list">
+              <li class="works__option-item works__option-item--beard">Борода</li>
+              <li class="works__option-item works__option-item--mustache">Усы</li>
+            </ul>
+          </div>
+        </li>
+        <li class="works__item">
+          <div class="works__image-container">
+            <img src="img/work-4-mobile.jpg" alt="Фотография работы">
+          </div>
+          <div class="works__description-container">
+            <h3 class="works__author">Винстон Синий</h3>
+            <blockquote class="works__info">Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!</blockquote>
+            <ul class="works__options-list">
+              <li class="works__option-item works__option-item--haircut">Стрижка</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="page-footer">
+    <div class="page-footer__container">
+      <div class="page-footer__address-container">
+        <span class="page-footer__title">Барбершоп Бородинский</span>
+        <span class="page-footer__address">г. Санкт-Петербург, ул. Большая<br> Конюшенная 19/8</span>
+        <a class="page-footer__tel" href="#">+7 (812) 555-66-66</a>
+      </div>
+      <div class="page-footer__social-container">
+        <b class="page-footer__friends">Давайте дружить!</b>
+        <ul class="page-footer__social">
+          <li class="page-footer__social-item"><a href="#"></a></li>
+          <li class="page-footer__social-item"><a href="#"></a></li>
+          <li class="page-footer__social-item"><a href="#"></a></li>
+        </ul>
+      </div>
+      <address class="page-footer__copyright">
+        <span class="page-footer__directed-by">Разработано:</span>
+        <a class="page-footer__creator" href="https://github.com/Magistr19">Паярели Александр</a>
+      </address>
+    </div>
+  </footer>
+  <div class="overlay"></div>
+  <script src="js/script.min.js"></script>
+</body>
+</html>
