@@ -30,5 +30,11 @@
 }
 
 .button-white--redirect-index {
-  width: 160px;
+  display: none;
+
+  @media (min-width: $tablet-size) {
+    display: flex;
+
+    width: 160px;
+  }
 }
