@@ -76,3 +76,23 @@
     margin-top: 9px;
   }
 }
+
+@media (min-width: $tablet-size) {
+  .price-list__container {
+    width: 960px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 84px;
+    padding-bottom: 83px;
+  }
+
+  .price-list__content-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 54px;
+  }
+
+  .price-list__table {
+    margin-top: 0;
+  }
+}
