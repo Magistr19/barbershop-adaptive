@@ -1,7 +1,3 @@
-.features {
-  background-color: #353535;
-}
-
 .features__container {
   position: relative;
   z-index: 2;
@@ -104,6 +100,10 @@
 }
 
 @media (min-width: $tablet-size) and (max-width: $tablet-size-only) {
+  .features {
+  background-color: #353535;
+  }
+
   .features__container {
     width: 640px;
     padding-right: 64px;
@@ -159,6 +159,10 @@
 }
 
 @media (min-width: $desktop-size) {
+  .features {
+    background-color: #353535;
+  }
+
   .features__container {
     width: 960px;
     padding-right: 120px;
