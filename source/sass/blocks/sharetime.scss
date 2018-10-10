@@ -17,3 +17,27 @@
   line-height: 27px;
   color: #ffffff;
 }
+
+@media (min-width: $tablet-size) {
+  .sharetime {
+    height: 113px;
+
+    img {
+      width: 72px;
+      height: 71px;
+    }
+  }
+
+  .sharetime__clock {
+    margin-left: 26px;
+  }
+
+  .sharetime__info-time {
+    margin-left: 86px;
+    width: auto;
+    font-size: 30px;
+    line-height: 27px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
