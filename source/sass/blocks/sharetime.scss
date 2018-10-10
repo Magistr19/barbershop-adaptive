@@ -1,0 +1,19 @@
+.sharetime {
+  box-sizing: border-box;
+  height: 91px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #484848;
+}
+
+.sharetime__clock {
+  margin-left: 20px;
+}
+
+.sharetime__info-time {
+  margin-left: 35px;
+  width: 125px;
+  font-size: 20px;
+  line-height: 27px;
+  color: #ffffff;
+}

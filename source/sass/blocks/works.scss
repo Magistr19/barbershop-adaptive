@@ -1,3 +1,8 @@
+.works {
+  z-index: 2;
+  position: relative;
+}
+
 .works__container {
   position: relative;
 
@@ -375,5 +380,4 @@
   .works__options-list {
     margin-top: auto;
   }
-
 }
