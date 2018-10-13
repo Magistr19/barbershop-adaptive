@@ -36,6 +36,8 @@
       height: 2px;
 
       content: "";
+      transition: opacity 0.3s ease-in,
+      background-color 0.3s ease-in;
 
       background-color: #ffffff;
       box-shadow: 0 8px 0 0 #ffffff,
@@ -77,6 +79,8 @@
       height: 2px;
 
       content: "";
+      transition: opacity 0.3s ease-in,
+      background-color 0.3s ease-in;
       transform: rotate(45deg);
 
       background-color: #ffffff;
@@ -127,6 +131,7 @@
       padding-bottom: 14px;
       padding-left: 22px;
 
+      transition: background-color, color, border-top-color, 0.3s ease-in;
       text-decoration: none;
       text-transform: uppercase;
 
@@ -272,6 +277,7 @@
       font-weight: 700;
       line-height: 24px;
 
+      transition: color 0.3s ease-in;
       text-decoration: none;
       text-transform: uppercase;
 
@@ -296,10 +302,10 @@
 
     &::after {
       position: absolute;
+      z-index: 1;
       right: 0;
       bottom: -25px;
       left: 0;
-      z-index: 1;
 
       height: 3px;
 
@@ -340,6 +346,7 @@
   }
 
   .main-nav__login-logo {
+    transition: fill, opacity 0.3s ease-in;
     pointer-events: none;
 
     opacity: 0.3;
@@ -385,6 +392,8 @@
       padding-right: 31px;
       padding-bottom: 24px;
       padding-left: 31px;
+
+      transition: background-color, color 0.3s ease-in;
 
       &[href]:hover {
         color: #000000;
@@ -432,6 +441,7 @@
     padding-right: 20px;
     padding-bottom: 23px;
 
+    transition: color, background-color 0.3s ease-in;
     text-align: right;
     text-decoration: none;
     text-transform: uppercase;

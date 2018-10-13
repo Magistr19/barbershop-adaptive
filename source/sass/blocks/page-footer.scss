@@ -58,6 +58,9 @@
 
   align-items: center;
   justify-content: center;
+  transition: border-color 0.3s ease-in,
+  color 0.3s ease-in,
+  background-color 0.3s ease-in;
 
   &:hover {
     border-color: #515151;
@@ -96,6 +99,7 @@
     background-image: url("../img/vk.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    transition: border-color, opacity 0.3s ease-in;
 
     &:hover {
       border: 1px solid #535353;
@@ -158,6 +162,7 @@
 
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
 
   &:hover {
     border-color: #515151;

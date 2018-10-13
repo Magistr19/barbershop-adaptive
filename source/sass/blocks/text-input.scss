@@ -10,6 +10,7 @@
 
   border: 1px solid #e5ddd5;
   background-color: #ffffff;
+  transition: border-color 0.3s ease-in;
 
   &:hover {
     border-color: #d5c9bd;

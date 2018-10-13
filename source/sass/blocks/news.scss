@@ -1,5 +1,4 @@
 .news__container {
-  border-top: 1px solid #242424;
   z-index: 1;
 
   width: 320px;
@@ -7,6 +6,7 @@
   padding-top: 67px;
   padding-bottom: 28px;
 
+  border-top: 1px solid #242424;
   border-bottom: 1px solid #e5ddd5;
   background-color: #f8f5f2;
 }
@@ -72,7 +72,6 @@
   background-color: #000000;
 
   justify-content: center;
-
   &::after {
     position: absolute;
     bottom: -8.5px;
@@ -115,6 +114,7 @@
   width: 210px;
   margin: 0;
 
+  transition: color 0.3s ease-in;
   text-decoration: none;
 
   color: #000000;
@@ -157,13 +157,12 @@
 
 @media (min-width: $tablet-size) {
   .news {
-    background-color: #f8f5f2;
     border-top: 1px solid #353535;
+    background-color: #f8f5f2;
   }
 
   .news__container {
     position: relative;
-    border-top-width: 0;
 
     width: 640px;
     padding-top: 88px;
@@ -172,6 +171,7 @@
     padding-bottom: 39px;
     padding-left: 64px;
 
+    border-top-width: 0;
     border-bottom: 1px solid #e5ddd5;
   }
 

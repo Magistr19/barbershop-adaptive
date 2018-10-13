@@ -83,6 +83,7 @@
     content: "";
 
     border: 1px solid #e5ddd5;
+    transition: border-color, background-color 0.1s ease-in;
   }
 
   &:hover::before {
@@ -147,6 +148,8 @@
   color: #ffffff;
   border: none;
   background-color: #826550;
+
+  transition: background-color, color 0.3s ease-in;
 
   &:hover {
     background-color: #6a4d38;

@@ -148,6 +148,7 @@
       border: 1px solid #f1ede8;
       border-radius: 50%;
       background-color: #ffffff;
+      transition: border-color, background-color 0.1s ease-in;
     }
 
     &::after {
@@ -165,6 +166,7 @@
       border: 1px solid #ffffff;
       border-radius: 50%;
       background-color: #ffffff;
+      transition: border-color, background-color 0.1s ease-in;
     }
 
     &:hover::before {
