@@ -102,6 +102,8 @@
 .works__image-container {
   width: 280px;
   height: 176px;
+  line-height: 0;
+  overflow: hidden;
 
   img {
     width: 100%;
@@ -239,6 +241,7 @@
   .works__item--of-day {
     .works__image-container {
       min-height: 480px;
+      width: 270px;
 
       &::before,
       &::after {
@@ -326,6 +329,7 @@
     .works__image-container {
       width: 480px;
       min-height: 480px;
+      height: auto;
 
       &::before {
         bottom: auto;
