@@ -9,7 +9,7 @@
 Использованные технологии:
 - HTML 5
 - CSS 3
-- Java Script
+- JavaScript
 - БЭМ
 - SASS
 - GULP
