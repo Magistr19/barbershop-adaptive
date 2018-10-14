@@ -109,6 +109,11 @@
       opacity: 0.3;
       border: 1px solid #252525;
     }
+
+    &:focus {
+      border: 1px solid #535353;
+      outline: none;
+    }
   }
 
   &:nth-child(2) a {

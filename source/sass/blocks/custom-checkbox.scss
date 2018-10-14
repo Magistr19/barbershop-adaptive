@@ -29,6 +29,12 @@
     }
   }
 
+  input[type="checkbox"]:focus + label {
+    &::before {
+      border-color: #d5c9bd;
+    }
+  }
+
   input[type="checkbox"]:checked + label {
     &::before {
       background-image: url("../img/marked.svg");
