@@ -30,9 +30,6 @@ var minify = require("gulp-csso");
 /* Минификация JS*/
 var uglify = require("gulp-uglify");
 
-/* Делает нечитаемым JS*/
-var obfuscate = require('gulp-obfuscate');
-
 /* Отдельный плагин для переименования файла */
 var rename = require("gulp-rename");
 
@@ -96,7 +93,6 @@ gulp.task("scripts", function () {
   return gulp.src("source/js/**/*.js")
     .pipe(plumber())
     .pipe(uglify())
-    .pipe(obfuscate())
     .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("build/js"))
     .pipe(server.stream());
