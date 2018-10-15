@@ -7,7 +7,6 @@
 *.sublime*
 node_modules/
 npm-debug.*
-source/css/*.css
 Thumbs.db
 build/
 layouts-psd/
